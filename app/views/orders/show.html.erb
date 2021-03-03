@@ -4,9 +4,35 @@
     <h1>Order #<%= @order.id %></h1>
   </header>
 
-  <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
-  </div>
+  <tr>
+    <% @line_items.each do |item| %>
+      <td>
+        <%= render 'item', product: item.product, order:item %>
+      </td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <th>
+    Email:
+    </th>
+
+    <th>
+      <%= @order.email %>
+    </th>
+  </tr>
+
+  <tr>
+    <th>
+      Total:
+    </th>
+  
+    <th>
+      <%= number_to_currency @order.total_cents %>
+    </th>
+
+  </tr>
+
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
