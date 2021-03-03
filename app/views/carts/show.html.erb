@@ -52,13 +52,9 @@
       </div>
       <% else %>
       <div class="alert alert-warning">
-        Your cart is empty!
-
-        <%%= image_tag('../../public/images/empty_cart-512.png') %>
-        <%= link_to "Back to product page", "products#index" %>
-
+        <%= fa_icon "shopping-cart", text: 'Your cart is empty!' %>
+        <%= link_to "Back to product page" , "products#index" %>
       </div>
       <% end %>
       
       </section>
-      
