@@ -28,9 +28,8 @@
     </th>
   
     <th>
-      <%= number_to_currency @order.total_cents %>
+      <%= humanized_money_with_symbol @order.total_cents / 100.00%>
     </th>
-
   </tr>
 
 

@@ -11,5 +11,14 @@
     <td class='description'>
     <%= product.description %>
     </td>
+  
+
+  <td>
+    <%= order.quantity %>
+  </td>
   </p>
+
+  <td>
+  <%= humanized_money_with_symbol product.price * order.quantity %>
+  </td>
 </t
