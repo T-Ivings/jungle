@@ -1,4 +1,11 @@
-<div style="display: flex; justify-content: center;">
+<section class="admin-dashboard-index">
+
+  <header class="page-header">
+    <h1>Admin &raquo; Dashboard</h1>
+  </header>
+
+<div></div>
+<div style="display: flex; justify-content: center; align-items: space-evenly;">
   <div style="display: flex; justify-content: center; font-size: 24px;">
     Total # of products:
   </div>
@@ -18,7 +25,7 @@
 
 <div style="display: flex; justify-content: center;">
   <div class="label label-success" style="display: flex; justify-content: center; font-size: 24px; width: 150px; height: 32px;">
-    <%= @category %>
+    <%= @categories %>
   </div>
 </div>
 
@@ -26,4 +33,5 @@
 <span style=""><%= link_to 'List to admin products list', [:admin, :products], style:"color: #FF7F7F", class: "label label-danger"%> </span>
 
 </div>
+</section>
 
