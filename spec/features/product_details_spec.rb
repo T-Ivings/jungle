@@ -21,8 +21,6 @@ RSpec.feature "Product Deatils", type: :feature, js: true do
     first("article.product").find_link("Details").trigger("click")
 
     expect(page).to have_css 'section.products-show'
-
-    save_screenshot
   end
 
 end

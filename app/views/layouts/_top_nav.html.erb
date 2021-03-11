@@ -26,19 +26,15 @@
           </ul>
         </li>
 
-        <li role="button" aria-haspopup="true" aria-expanded="false">
+
+        <li role="button" area-haspopup="true" area-expanded="false">
             <%= link_to 'About', [:about] %>
         </li>
 
-        <li area-haspopup="true" area-expended="false">
-          <% if current_user %>
-          Signed in as <%= current_user.first_name %> <%= current_user.last_name %> 
-        </li>
-
-      <li role="button" area-haspopup="true" area-expended="false"> 
-         <%= link_to "Logout", '/logout' %>
-        </li>
-          
+        <% if current_user %>
+        <li role="button" area-haspopup="true" area-expended="false"> 
+           <%= link_to "Logout", '/logout' %>
+          </li>  
         <% else %>
         <li role="button" area-haspopup="true" area-expended="false">
         <%= link_to 'Login', '/login' %> 
@@ -51,6 +47,28 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+      <%if current_user %>
+      <li style=
+      "
+      padding-top: 15px;
+      color: 	#949494;
+      font-family: Helvetica;
+      " 
+      area-expended="false">
+        Logged in as: &nbsp;  
+        </li>
+      <li style=
+      "
+      padding-top: 15px;
+      color: 	#820C02;
+      text-shadow: 2px 2px 7px #DE3F24;
+      font-family: Helvetica;
+      " 
+      area-expended="false">
+      <%= current_user.first_name %>
+      <%= current_user.last_name %> 
+      </li>
+      <% end %>
       
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
