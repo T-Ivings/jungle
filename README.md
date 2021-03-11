@@ -26,3 +26,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Stripe
 
 ## Images
+
+!["Home page"](https://github.com/T-Ivings/jungle/blob/master/public/Images/jungle2.png?raw=true)
+!["Cart page"](https://github.com/T-Ivings/jungle/blob/master/public/Images/jungle1.png?raw=true)
